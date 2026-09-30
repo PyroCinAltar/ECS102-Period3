@@ -12,6 +12,11 @@ public class Topping extends Actor
      * Act - do whatever the Topping wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private String name;
+    public Topping(String n){
+        this.name = n;
+        setImage(name+".png");
+    }
     public void act()
     {
         fall();
