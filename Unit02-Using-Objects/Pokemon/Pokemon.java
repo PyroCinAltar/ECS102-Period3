@@ -16,6 +16,7 @@ public class Pokemon extends Actor
     private Attack attack;
     private String type;
     
+    public Pokemon(int hp, int ap, String name, String attack, )
     public String getType(){
         return this.type;
     }
@@ -39,4 +40,6 @@ public class Pokemon extends Actor
     public int getAttackPower(String attackname, User enemy){
         return 0;
     }
+    
+    public int getHp()
 }
