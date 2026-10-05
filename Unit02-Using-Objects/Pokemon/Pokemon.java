@@ -47,7 +47,7 @@ public class Pokemon extends Actor
     }
     
     public int getAPower(String attackName, User enemy){
-        Attack a = enemy.getPokemon.getAttack();
+        Attack a = enemy.getPokemon().getAttack();
         return a.getPower();
     }
     
