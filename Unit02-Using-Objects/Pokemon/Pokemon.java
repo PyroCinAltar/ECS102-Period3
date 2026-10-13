@@ -22,13 +22,19 @@ public class Pokemon extends Actor
         this.name = name;
         this.attack = new Attack(attack);
         this.type = type;
+        
+        this.img = new GreenfootImage(name.toLowerCase()+".png");
+        this.img.scale(160, 160);
+        setImage(this.img);
+        this.outStatus = false;
     }
+    
     public String getType(){
         return this.type;
     }
 
     public void attack(String attackName, User enemy){
-        takeDamage(enemy.getPokemon().getAPower(attackName, enemy));
+        enemy.getPokemon().takeDamage(getAPower(attackName, enemy));
     }
     
     public void takeDamage(int amount){
@@ -64,6 +70,6 @@ public class Pokemon extends Actor
     }
     
     public boolean isOut(){
-        return this.hp<=0;
+        return this.outStatus;
     }
 }
