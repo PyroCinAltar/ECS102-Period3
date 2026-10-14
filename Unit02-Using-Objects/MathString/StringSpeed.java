@@ -10,11 +10,11 @@ public class StringSpeed {
 
         // 1. Build a long String with += (given)
         long start = System.nanoTime();
-        String s = "";
-        for (int i = 0; i < n; i++) {
-            s += "t";
-        }
-        long plusTime = System.nanoTime() - start;
+        // String s = "";
+        // for (int i = 0; i < n; i++) {
+        //     s += "t";
+        // }
+        // long plusTime = System.nanoTime() - start;
 
         // 2. TODO: build the same text with a StringBuilder.
         //    StringBuilder sb = new StringBuilder();  then  sb.append("t");
@@ -27,8 +27,8 @@ public class StringSpeed {
         String t = sb.toString();
         long builderTime = System.nanoTime() - start;
 
-        System.out.println("Same text? " + s.equals(t));
-        System.out.println("+= time (ms): " + plusTime / 1_000_000.0);
+        // System.out.println("Same text? " + s.equals(t));
+        // System.out.println("+= time (ms): " + plusTime / 1_000_000.0);
         System.out.println("StringBuilder time (ms): " + builderTime / 1_000_000.0);
     }
 }
