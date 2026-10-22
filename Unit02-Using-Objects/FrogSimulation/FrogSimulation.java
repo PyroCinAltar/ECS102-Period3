@@ -10,7 +10,7 @@ public class FrogSimulation {
     private int hopDistance() {
         int hop = 0;
         hop = (int) (Math.random()*10)+1;
-        if (Math.random()<=0.9){
+        if (Math.random()>=0.9){
             hop = -hop;
         }
         return hop;
@@ -25,8 +25,8 @@ public class FrogSimulation {
                 break;
             }
         }
-        
-        return displacement == this.goalDistance;
+        // System.out.println(displacement); Here to check if the values are working properly
+        return displacement >= this.goalDistance;
     }
 
     public double runSimulations(int num){
@@ -39,6 +39,8 @@ public class FrogSimulation {
             }
             i++;
         }
+
+        // System.out.println(successSims); Here to check if the values are working properly
         return ((double) successSims)/num;
         
     }
