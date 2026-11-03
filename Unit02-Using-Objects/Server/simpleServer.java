@@ -36,6 +36,7 @@ public class simpleServer {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        System.out.println("System Started");
         try {
             simpleServer server = new simpleServer(9090);
             server.acceptClient();
@@ -48,6 +49,7 @@ public class simpleServer {
                     break;
                 }
             }
+            input.close();
         } catch(Exception e) {
 
         }
