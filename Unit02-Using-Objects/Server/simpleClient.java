@@ -34,7 +34,7 @@ public class simpleClient {
             String msg = input.nextLine();
             simpleClient.sendMessage(msg);
             String serverR = simpleClient.recieveMessage();
-            System.out.println("Server said "+ serverR);
+            System.out.println("Server:"+ serverR);
             if (serverR.equals("stop")){
                 break;
             }
